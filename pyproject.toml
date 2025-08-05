@@ -1,0 +1,17 @@
+[project]
+name = "monopopy"
+version = "0.1.0"
+description = "A complete Monopoly game implementation with rich TUI interface"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+monopopy = "main:main"
+monopoly = "main:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
