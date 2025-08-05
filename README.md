@@ -1,2 +1,169 @@
-# monopopy
-python monopoly
+# 🎩 Monopoly - Complete TUI Implementation
+
+A complete, tested, and verified Monopoly game implemented in Python using the Rich library for an excellent terminal user interface.
+
+## ✨ Features
+
+- **Complete USA Monopoly Board**: All 40 spaces including properties, railroads, utilities, and special spaces
+- **Full Property System**: Buy, sell, mortgage properties and build houses/hotels
+- **Rich TUI Interface**: Beautiful terminal interface with tables, colors, and emojis
+- **Chance & Community Chest**: Complete implementation of all classic cards (2008-2021 versions)
+- **Jail Mechanics**: Get out of jail free cards, pay fines, or roll doubles
+- **Bankruptcy Handling**: Complete debt management and player elimination
+- **Property Management**: Build monopolies, manage houses/hotels, mortgage properties
+- **Interactive Gameplay**: Turn-based play with clear prompts and game state display
+- **Property Trading**: Complete player-to-player trading system with properties and cash
+- **Property Auctions**: Automatic auctions when players decline to purchase properties
+- **Building Shortage**: Realistic house/hotel shortage mechanics with even building rules
+- **Enhanced Card Logic**: Full implementation of all Chance and Community Chest card effects
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.13+ 
+- uv package manager
+
+### Installation & Running
+
+```bash
+# Clone/navigate to the project directory
+cd monopopy
+
+# Install dependencies
+uv sync
+
+# Run the game
+uv run python main.py
+```
+
+## 🎮 Game Modes
+
+### 1. Quick Demo Mode
+- 2 players (Alice vs Bob)  
+- Automated turns for demonstration
+- Limited to 10 turns
+- Shows core game mechanics
+
+### 2. Full Interactive Game
+- 2-4 players
+- Complete Monopoly rules
+- Property management menus
+- Full game until bankruptcy/winner
+
+### 3. Test Mode
+- Runs automated test suite
+- Verifies all game mechanics
+- Useful for development/debugging
+
+## 🏠 Properties & Board
+
+The game includes all classic USA Monopoly properties:
+
+### Property Groups
+- **Brown**: Mediterranean Avenue, Baltic Avenue
+- **Light Blue**: Oriental Avenue, Vermont Avenue, Connecticut Avenue  
+- **Pink**: St. Charles Place, States Avenue, Virginia Avenue
+- **Orange**: St. James Place, Tennessee Avenue, New York Avenue
+- **Red**: Kentucky Avenue, Indiana Avenue, Illinois Avenue
+- **Yellow**: Atlantic Avenue, Ventnor Avenue, Marvin Gardens
+- **Green**: Pacific Avenue, North Carolina Avenue, Pennsylvania Avenue
+- **Dark Blue**: Park Place, Boardwalk
+
+### Railroads & Utilities
+- **Railroads**: Reading, Pennsylvania, B&O, Short Line
+- **Utilities**: Electric Company, Water Works
+
+## 🎲 Game Mechanics
+
+### Turn Flow
+1. **Property Management** (optional): Manage properties before rolling
+2. **Roll Dice**: Move around board, handle doubles
+3. **Land on Space**: Buy properties, pay rent, draw cards
+4. **Special Actions**: Jail, taxes, card effects
+
+### Property Management
+- **Buy Properties**: Purchase unowned properties you land on
+- **Build Houses/Hotels**: Requires monopoly, costs vary by property group
+- **Mortgage Properties**: Get cash when needed, pay 10% interest to unmortgage
+- **Pay Rent**: Amount depends on development and monopoly status
+
+### Card Effects
+- **Chance Cards**: Movement, money, repairs, jail
+- **Community Chest**: Money, fees, jail, special effects
+- **Get Out of Jail Free**: Keep until used, traded, or sold
+
+### Victory Conditions
+- Game ends when only one player remains (others bankrupt)
+- Winner is the last player standing with positive net worth
+
+## 🧪 Testing
+
+The game includes comprehensive tests:
+
+```bash
+# Run tests directly
+uv run python test_game.py
+
+# Or use test mode in main game
+uv run python main.py
+# Choose option 3: Test Mode
+```
+
+Tests cover:
+- Board setup and property data
+- Rent calculations for all property types
+- Player movement and passing GO
+- Monopoly ownership detection  
+- Card deck functionality
+- Game flow mechanics
+
+## 📖 Code Structure
+
+The implementation follows Tiger Style principles focusing on:
+
+- **Safety**: Explicit bounds, clear error handling, predictable control flow
+- **Performance**: Efficient data structures, minimal allocations  
+- **Developer Experience**: Clear naming, logical organization, comprehensive documentation
+
+### Key Classes
+
+- `MonopolyGame`: Main game controller and state management
+- `Player`: Player data, money, properties, actions
+- `Property`: Property details, rent calculation, ownership
+- `BoardSpace`: Individual board spaces with type and property data
+
+### Architecture Highlights
+
+- Enum-based type safety for colors and space types
+- Dataclass-based data structures for clarity
+- Comprehensive error handling and bankruptcy management
+- Rich TUI integration for excellent user experience
+
+## 🎯 Game Tips
+
+### Strategy
+- **Early Game**: Buy properties to build monopolies
+- **Monopolies**: Essential for significant rent income
+- **Railroads**: Excellent steady income properties
+- **Cash Management**: Keep enough cash for rent payments
+- **Building**: Houses are limited (32), hotels unlimited
+
+### Property Values
+- **Cheap**: Mediterranean ($60) to Connecticut ($120)
+- **Mid-Range**: St. Charles ($140) to New York ($200) 
+- **Expensive**: Kentucky ($220) to Illinois ($240)
+- **Premium**: Atlantic ($260) to Boardwalk ($400)
+
+## 🛠 Development
+
+Built with modern Python best practices:
+- Type hints throughout
+- Dataclasses for clean data structures
+- Rich library for beautiful TUI
+- Comprehensive error handling
+- Extensive test coverage
+
+## 📝 License
+
+This project is a learning implementation of the classic Monopoly board game.
