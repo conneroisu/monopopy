@@ -1,0 +1,4 @@
+[console_scripts]
+monopoly = main:main
+monopoly-mcp = mcp_server:mcp.run
+monopopy = main:main

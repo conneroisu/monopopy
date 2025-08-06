@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+monopopy.egg-info/PKG-INFO
+monopopy.egg-info/SOURCES.txt
+monopopy.egg-info/dependency_links.txt
+monopopy.egg-info/entry_points.txt
+monopopy.egg-info/requires.txt
+monopopy.egg-info/top_level.txt
+result/share/monopopy/main.py
+result/share/monopopy/test_game.py
