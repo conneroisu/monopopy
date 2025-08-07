@@ -1,3 +1,14 @@
+Metadata-Version: 2.4
+Name: monopopy
+Version: 0.1.0
+Summary: A complete Monopoly game implementation with rich TUI interface
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich>=13.0.0
+Requires-Dist: fastmcp>=2.0.0
+Dynamic: license-file
+
 # 🎩 Monopoly - Complete TUI Implementation
 
 A complete, tested, and verified Monopoly game implemented in Python using the Rich library for an excellent terminal user interface.
@@ -16,7 +27,6 @@ A complete, tested, and verified Monopoly game implemented in Python using the R
 - **Property Auctions**: Automatic auctions when players decline to purchase properties
 - **Building Shortage**: Realistic house/hotel shortage mechanics with even building rules
 - **Enhanced Card Logic**: Full implementation of all Chance and Community Chest card effects
-- **🤖 MCP Server**: Model Context Protocol server for AI agents to play together
 
 ## 🚀 Quick Start
 
@@ -164,39 +174,6 @@ Built with modern Python best practices:
 - Rich library for beautiful TUI
 - Comprehensive error handling
 - Extensive test coverage
-
-## 🤖 AI Agent Gameplay (MCP Server)
-
-The game includes a Model Context Protocol (MCP) server that allows AI agents to play Monopoly together.
-
-### Starting the MCP Server
-
-```bash
-# Start the MCP server for AI agents
-uv run monopoly-mcp
-```
-
-### AI Agent Tools
-
-The MCP server exposes these tools for AI agents:
-
-- `create_game` - Create new games with AI players
-- `get_game_state` - Query current game state
-- `play_turn` - Execute player turns (roll dice, move, etc.)
-- `buy_property` / `decline_property` - Handle property purchases
-- `get_player_properties` - View property portfolios
-- `get_board_info` - Access board layout information
-
-### Testing MCP Integration
-
-```bash
-# Test the MCP server functionality
-uv run python test_mcp_functions.py
-```
-
-**Comprehensive Verification**: The MCP server has been thoroughly tested with unit tests, integration tests, error handling, property-based tests, and performance verification. See [MCP_VERIFICATION_REPORT.md](MCP_VERIFICATION_REPORT.md) for complete test results.
-
-For detailed AI integration instructions, see [MCP_USAGE.md](MCP_USAGE.md).
 
 ## 📝 License
 
